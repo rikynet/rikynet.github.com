@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>Riky.Net domainain for sale</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+
+    .w3-half img:hover {
+        opacity: 1
+    }
+</style>
+<body onload="emailText();">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">&#10062;</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>riky.net</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>For sale</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>riky.net for sale</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>$1000</b></h1>
+            <p>The domain riky.net is for sale. We accept crypto currency such as Bitcoin, Nano, Monero etc.</p>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+
+        <!-- Contact -->
+        <div class="w3-container" id="contact" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Contact</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B">
+    	<img src="icon/email.png" alt="email" height="42" width="42">
+    	<span id="emailt"></span>
+    </a></p>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <!-- Powered by Container -->
+    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+        <p class="w3-right">Powered by
+            <a href="http://www.riky.net" title="Riky.NET" target="_blank" class="w3-hover-opacity">Riky.NET</a></p>
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+
+        function emailText() {
+            var name = "tamer";
+            var domain = "gmx.li";
+            var e = document.getElementById('emailt');
+            var text = document.createTextNode(' ' + name + "@" + domain);
+            e.appendChild(text);
+
+            e = document.getElementById('phonet');
+            text = document.createTextNode('+1(424)644-6242');
+            e.appendChild(text);
+        }
+
+        function SendLinkByMail(href) {
+            var name = "tamer";
+            var domain = "gmx.li";
+            document.getElementById('email').innerHTML = name + "@" + domain;
+            var subject = "oemforce.com";
+            var body = "Enter your message here:";
+            body += window.location.href;
+            body += ">";
+            var uri = "mailto:";
+            uri += name;
+            uri += '@';
+            uri += domain;
+            uri += "?subject=";
+            uri += encodeURIComponent(subject);
+            uri += "&body=";
+            uri += encodeURIComponent(body);
+            window.open(uri);
+        }
+    </script>
+</body>
+</html>
